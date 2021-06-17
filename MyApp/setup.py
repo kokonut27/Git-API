@@ -1,6 +1,5 @@
 from setuptools import setup
 
-#e
 
 with open("README.md", "r") as fh:
   long_description = fh.read()
@@ -13,10 +12,9 @@ setup(
   long_description_content_type = "text/markdown",
   url = "#Github or Website. This parameter isn't needed.",
   author = "JBYT27",
-  author_email = "Your email",#add email
-#To find more licenses or classifiers go to: https://pypi.org/classifiers/
+  author_email = "beol0127@gmail.com",
   license = "MIT",
-  packages=['GITAPI'],
+  packages=['GitAPI'],
   classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
