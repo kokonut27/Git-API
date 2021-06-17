@@ -1,6 +1,6 @@
-import os, requests, json
-os.system("pip install beautifulsoup4")
-from bs4 import BeautifulSoup
+import json
+import requests
 
-def github_user():
-  
+class USER:
+  def __init__(self):
+    pass
