@@ -1,3 +1,3 @@
 # GitAPI Module
-##### A module made by @JBloves27
+> A module made by @JBloves27
 
