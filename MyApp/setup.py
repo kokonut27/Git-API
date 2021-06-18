@@ -5,16 +5,16 @@ with open("README.md", "r") as fh:
   long_description = fh.read()
 
 setup(
-  name = "Git_API",
+  name = "git_api",
   version = "0.0.1",
   description = "A GitHub API. Extracts data from GitHub into json style data.",
   long_description = long_description,
   long_description_content_type = "text/markdown",
-  url = "https://github.com/JBYT27/GITAPI",
+  url = "https://github.com/JBYT27/GitAPI",
   author = "JBYT27",
   author_email = "beol0127@gmail.com",
   license = "MIT",
-  packages=[''],
+  packages=['git_api'],
   classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
