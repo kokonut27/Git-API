@@ -105,5 +105,5 @@ class User:
     self.bio = self.runQ(query, self.token)
     return self.bio 
 
-Token(os.environ["token"])
-print(User("JBYT27").User())
+# Token(os.environ["token"])
+# print(User("JBYT27").User())
