@@ -105,5 +105,6 @@ class User:
     self.bio = self.runQ(query, self.token)
     return self.bio 
 
+# Remove this when uploading to PyPi
 # Token(os.environ["token"])
 # print(User("JBYT27").User())
