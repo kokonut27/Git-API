@@ -82,5 +82,5 @@ class User:
     self.name = asdf.run_query(query, self.token)
     return self.name
 
-Token(os.environ["token"])
-print(User("JBYT27").User())
+# Token(os.environ["token"])
+# print(User("JBYT27").User())
