@@ -62,12 +62,13 @@ class User:
     #if self.token == None:
     #  raise Exception("Token must be inputted!")
     if self.user == None:
-      raise Exception("Username must be inputted!")
+      raise ArgumentError("Username argument must be filled out!")
     
     #return asdf.run_query(query, self.token)
+    self.runQ = asdf.run_query
 
   def User(self):
-    self.userf = asdf.run_query(self.query, self.token)
+    self.userf = self.runQ(self.query, self.token)
     return self.userf
 
 
@@ -79,8 +80,30 @@ class User:
           } 
       }
     """
-    self.name = asdf.run_query(query, self.token)
+    self.name = self.runQ(query, self.token)
     return self.name
+  
+  def Bio(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            bio
+          }
+      }
+    """
+    self.bio = self.runQ(query, self.token)
+    return self.bio 
+  
+  def Bio(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            name
+          }
+      }
+    """
+    self.bio = self.runQ(query, self.token)
+    return self.bio 
 
-# Token(os.environ["token"])
-# print(User("JBYT27").User())
+Token(os.environ["token"])
+print(User("JBYT27").User())
