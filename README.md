@@ -35,3 +35,6 @@ from git_api import *
 > Note that all of these methods work.
 
 ### Usage
+
+## Contributing
+Contributing will be listed mostly in the [Code of Conduct](), however for more info, visit the [Contributing]() readme.
