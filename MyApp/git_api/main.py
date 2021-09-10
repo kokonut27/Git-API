@@ -94,17 +94,31 @@ class User:
     self.bio = self.runQ(query, self.token)
     return self.bio 
   
-  def Bio(self):
+  def Email(self):
     query = """
       query UserData {
           user(login: \"""" + self.user + """\") {
-            name
+            email
           }
       }
     """
-    self.bio = self.runQ(query, self.token)
-    return self.bio 
+    self.email = self.runQ(query, self.token)
+    file = open("email.json","a")
+    file3 = open("email.json","r")
+    for i in file3:
+      if i == "{":
+        break
+      else:
+        file.write(self.email)
+        break
+    file2 = open("email.json","r")
+    data = json.load(file2)
+    if data["data"]["user"]["email"] == "" or data["data"]["user"]["email"] == None:
+      print("No email exists or is private!")
+    #os.remove("email.json")
+    return self.email 
 
 # Remove this when uploading to PyPi
 # Token(os.environ["token"])
 # print(User("JBYT27").User())
+# User("JBYT27").Email()
