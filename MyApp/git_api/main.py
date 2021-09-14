@@ -116,7 +116,7 @@ class User:
     if data["data"]["user"]["email"] == "" or data["data"]["user"]["email"] == None:
       print("No email exists or is private!")
     #os.remove("email.json")
-    return self.email 
+    return self.email
 
 # Remove this when uploading to PyPi
 # Token(os.environ["token"])
