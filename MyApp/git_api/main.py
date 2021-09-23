@@ -125,4 +125,4 @@ class User:
 # Remove this when uploading to PyPi
 # Token(os.environ["token"])
 # print(User("JBYT27").User())
-# print(User("JBYT27").Bio())
+# print(User("JBYT27").Email())
