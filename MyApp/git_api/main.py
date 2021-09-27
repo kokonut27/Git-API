@@ -122,7 +122,18 @@ class User:
     self.avatar = self.runQ(query, self.token)
     return self.avatar
 
+class GitHub:
+  def __init__(self):
+    self.url = "https://github.com"
+
+  def Status(self):
+    #url = "https://github.com"
+    res = requests.get(self.url)
+    self.status = res.status_code
+    return self.status
+
 # Remove this when uploading to PyPi
 # Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
+# print(GitHub.Status())
