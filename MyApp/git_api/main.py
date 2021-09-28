@@ -121,16 +121,104 @@ class User:
     """
     self.avatar = self.runQ(query, self.token)
     return self.avatar
+  
+  def Account(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            accountCreatedAt:createdAt
+          }
+      }
+    """
+    self.account = self.runQ(query, self.token)
+    return self.account
+  
+  def Admin(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            isAdmin:isSiteAdmin
+          }
+      }
+    """
+    self.admin = self.runQ(query, self.token)
+    return self.admin
+
+  def Location(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            location
+          }
+      }
+    """
+    self.location = self.runQ(query, self.token)
+    return self.location
+  
+  def Location(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            location
+          }
+      }
+    """
+    self.location = self.runQ(query, self.token)
+    return self.location
+  
+  def Twitter(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            twitterUsername
+          }
+      }
+    """
+    self.twitter = self.runQ(query, self.token)
+    return self.twitter
+  
+  def Developer(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            isDevMember:isDeveloperProgramMember
+          }
+      }
+    """
+    self.dev = self.runQ(query, self.token)
+    return self.dev
+  
+  def Userid(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            userId:databaseId
+          }
+      }
+    """
+    self.userid = self.runQ(query, self.token)
+    return self.userid
+  
+  def PinnedItems(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            pinnedItems:anyPinnableItems
+          }
+      }
+    """
+    self.pinneditems = self.runQ(query, self.token)
+    return self.pinneditems
 
 class GitHub:
-  def __init__(self):
-    self.url = "https://github.com"
+  def Status():
+    url = "https://github.com"
+    res = requests.get(url)
+    status = res.status_code
+    return status
+  
+  # def smth():
 
-  def Status(self):
-    #url = "https://github.com"
-    res = requests.get(self.url)
-    self.status = res.status_code
-    return self.status
 
 # Remove this when uploading to PyPi
 # Token(os.environ["token"])
