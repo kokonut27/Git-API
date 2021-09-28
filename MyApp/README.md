@@ -1,8 +1,16 @@
+CAUTION: **`Note that this is a work in progress, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`**
+> **Version: 1.0.0
+
 # GitAPI: An API made for GitHub Stats!
-> Coded in Python3, uploaded to PyPi, and coded by JBYT27
+> Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
 
 ## About
-hmms
+### About
+GitAPI is an API made with python - styled with json - to make the data preferably easier to use. It is made up of posting `json` requests, and retrieving that data from a function, and transfering that data into an output, in which you can use.
+
+This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form. 
+
+> To learn how to use it, you can read the Usage header below.
 
 ### Languages used
 Languages used to program this package were: [Python3](https://python.org)
