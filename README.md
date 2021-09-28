@@ -1,4 +1,5 @@
 CAUTION: **`Note that this is a work in progress, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`**
+> **Version: 1.0.0
 
 # GitAPI: An API made for GitHub Stats!
 > Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
