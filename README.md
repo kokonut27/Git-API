@@ -105,3 +105,11 @@ Contributing will be listed mostly in the [Code of Conduct](https://github.com/J
 
 ## License
 This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/master/MyApp/LICENSE).
+
+## Features:
+- [x] Add basic features for `User()` class 
+- [ ] Add advanced features for `User()` class
+- [x] Add basic functions for `GitHub()` class
+- [ ] Add advanced functions for `GitHub()` class
+- [ ] Add basic functions in package
+- [ ] Add documentary for package 
