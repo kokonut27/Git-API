@@ -1,2 +1,2 @@
-# language = "python3"
-# run = "python MyApp/git_api/main.py" # Remove this when uploading to PyPi
+language = "python3"
+run = "python MyApp/git_api/main.py" # Remove this when uploading to PyPi
