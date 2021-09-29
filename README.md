@@ -86,6 +86,8 @@ os.environ["token"] # Insert your .env variable here
 ```
 #5: Then you're pretty much done! Your final code example should look something like this:
 
+#### 2: Finale
+
 ```py
 import git_api
 
