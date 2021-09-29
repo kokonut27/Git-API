@@ -8,7 +8,7 @@ CAUTION: **`Note that this is a work in progress, and is not yet perfected. Ther
 ### About
 GitAPI is an API made with python - styled with json - to make the data preferably easier to use. It is made up of posting `json` requests, and retrieving that data from a function, and transfering that data into an output, in which you can use.
 
-This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form. 
+This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form.
 
 > To learn how to use it, you can read the Usage header below.
 
@@ -100,3 +100,6 @@ print(user_info)
 
 ## Contributing
 Contributing will be listed mostly in the [Code of Conduct](https://github.com/JBYT27/GitAPI/blob/master/.github/CODE_OF_CONDUCT.md), however for more info, visit the [Contributing](https://github.com/JBYT27/GitAPI/blob/master/.github/CONTRIBUTE.md) readme.
+
+## License
+This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/master/MyApp/LICENSE).
