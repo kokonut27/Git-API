@@ -3,6 +3,8 @@ CAUTION: **`Note that this is a work in progress, and is not yet perfected. Ther
 
 # GitAPI: An API made for GitHub Stats!
 > Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
+> 
+> Assisted by [darkdarcool](https://github.com/darkdarcool)
 
 ## About
 ### About
