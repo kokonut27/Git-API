@@ -216,8 +216,6 @@ class GitHub:
     res = requests.get(url)
     status = res.status_code
     return status
-  
-  # def smth():
 
 
 # Remove this when uploading to PyPi
@@ -225,4 +223,3 @@ class GitHub:
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
-

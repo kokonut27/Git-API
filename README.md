@@ -17,6 +17,9 @@ This API is designed to show GitHub stats for certain users, or viewing GitHub i
 ### Languages used
 Languages used to program this package were: [Python3](https://python.org)
 
+### Queries
+Not all of the GitHub queries are in here, but if you wish to see all of them, go to [this](https://docs.github.com/en/graphql/reference/queries) GitHub docs.
+
 ## Usage
 ### Installation
 
