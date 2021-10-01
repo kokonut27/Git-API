@@ -17,6 +17,7 @@ USER = """
   userId:databaseId
   pinnedItems:anyPinnableItems 
 """
+query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
 class ArgumentError(Exception):
   pass
