@@ -26,6 +26,7 @@ class QueryFailError(Exception):
 
 
 class asdf:
+  # run a request from the github api
   def run_query(query, token):
         try:
           headers = {"Authorization": "Bearer " + token}
@@ -34,9 +35,10 @@ class asdf:
         request = requests.post(url, json={'query': query}, headers=headers)
         if request.status_code == 200:
           return json.dumps(request.json(), indent=2, sort_keys=True)
-        else:
+        else: # the request failed
           raise QueryFailError("Query failed to run by returning code of {}. {}".format(request.status_code, query))
 
+# set the token
 def Token(TOKEN=None):
   global token
   if TOKEN == None:
@@ -48,9 +50,11 @@ class User:
   def __init__(self, username):
     try:
       self.token = token
+     # if user has not yet ran the token function
     except:
       raise ArgumentError("Token has not been named by token function!")
     self.user = username
+    # create the query
     query = """
       query UserData { 
           user(login: \"""" + self.user + """\") { 
@@ -62,17 +66,19 @@ class User:
     
     #if self.token == None:
     #  raise Exception("Token must be inputted!")
+    # if the username is none
     if self.user == None:
       raise ArgumentError("Username argument must be filled out!")
     
     #return asdf.run_query(query, self.token)
     self.runQ = asdf.run_query
 
+  # actually run the request
   def User(self):
     self.userf = self.runQ(self.query, self.token)
     return self.userf
 
-
+  # edit the query
   def Name(self):
     query = """
       query UserData { 
