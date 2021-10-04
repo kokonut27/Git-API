@@ -65,8 +65,8 @@ Once you're done with that, open the file, and add the following example code:
 ```py
 import git_api
 
-Token() # We'll place the personal access token here later on. For now, it'll be empty.
-user_info = User("Username here").User() # Insert your username in the argument shown here.
+git_api.Token() # We'll place the personal access token here later on. For now, it'll be empty.
+user_info = git_api.User("Username here").User() # Insert your username in the argument shown here.
 
 print(user_info)
 ```
@@ -105,8 +105,8 @@ os.environ["token"] # Insert your .env variable here
 ```py
 import git_api
 
-Token(os.environ["token"])
-user_info = User("JBYT27").User()
+git_api.Token(os.environ["token"])
+user_info = git_api.User("JBYT27").User()
 
 print(user_info)
 ```
