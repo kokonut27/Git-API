@@ -3,8 +3,6 @@ CAUTION: **`Note that this is a work in progress, and is not yet perfected. Ther
 
 # GitAPI: An API made for GitHub Stats!
 > Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
-> 
-> Assisted by [darkdarcool](https://github.com/darkdarcool)
 
 ## About
 ### About
@@ -19,6 +17,9 @@ Languages used to program this package were: [Python3](https://python.org)
 
 ### Queries
 Not all of the GitHub queries are in here, but if you wish to see all of them, go to [this](https://docs.github.com/en/graphql/reference/queries) GitHub docs.
+
+### Contributers
+- [darkdarcool](https://github.com/darkdarcool)
 
 ## Usage
 ### Installation
