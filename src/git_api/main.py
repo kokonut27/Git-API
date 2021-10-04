@@ -64,13 +64,10 @@ class User:
     """
     self.query = query
     
-    #if self.token == None:
-    #  raise Exception("Token must be inputted!")
     # if the username is none
     if self.user == None:
       raise ArgumentError("Username argument must be filled out!")
     
-    #return asdf.run_query(query, self.token)
     self.runQ = asdf.run_query
 
   # actually run the request
@@ -78,7 +75,7 @@ class User:
     self.userf = self.runQ(self.query, self.token)
     return self.userf
 
-  # edit the query
+  # edit the query - returns github nickname
   def Name(self):
     query = """
       query UserData { 
@@ -90,6 +87,7 @@ class User:
     self.name = self.runQ(query, self.token)
     return self.name
   
+  # same thing as above, just for github bio
   def Bio(self):
     query = """
       query UserData {
