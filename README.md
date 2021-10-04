@@ -1,6 +1,13 @@
 CAUTION: **`Note that this is a work in progress, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`**
 > **Version: 1.0.0
 
+[![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/network/members)
+[![Stargazers](https://img.shields.io/github/stars/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/stargazers)
+[![Issues](https://img.shields.io/github/issues/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/issues)
+[![License](https://img.shields.io/github/license/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/blob/master/LICENSE)
+[![Downloads on PyPI](https://img.shields.io/pypi/dw/git_api?style=for-the-badge)](https://pypi.org/project/git-api/)
+
 # GitAPI: An API made for GitHub Stats!
 > Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
 
