@@ -20,6 +20,7 @@ Not all of the GitHub queries are in here, but if you wish to see all of them, g
 
 ### Contributers
 - [darkdarcool](https://github.com/darkdarcool)
+- [Isaiah08-D](https://github.com/Isaiah08-D)
 
 ## Usage
 ### Installation
