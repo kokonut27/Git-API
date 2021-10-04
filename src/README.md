@@ -1,5 +1,12 @@
-CAUTION: **`Note that this is a work in progress, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`**
-> **Version: 1.0.0
+⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️
+> **Version: 1.0.1
+
+[![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/network/members)
+[![Stargazers](https://img.shields.io/github/stars/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/stargazers)
+[![Issues](https://img.shields.io/github/issues/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/issues)
+[![License](https://img.shields.io/github/license/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/blob/master/LICENSE)
+[![Downloads on PyPI](https://img.shields.io/pypi/dw/git_api?style=for-the-badge)](https://pypi.org/project/git-api/)
 
 # GitAPI: An API made for GitHub Stats!
 > Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org), and coded by [JBYT27](https://github.com/JBYT27)
@@ -8,12 +15,19 @@ CAUTION: **`Note that this is a work in progress, and is not yet perfected. Ther
 ### About
 GitAPI is an API made with python - styled with json - to make the data preferably easier to use. It is made up of posting `json` requests, and retrieving that data from a function, and transfering that data into an output, in which you can use.
 
-This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form. 
+This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form.
 
 > To learn how to use it, you can read the Usage header below.
 
 ### Languages used
 Languages used to program this package were: [Python3](https://python.org)
+
+### Queries
+Not all of the GitHub queries are in here, but if you wish to see all of them, go to [this](https://docs.github.com/en/graphql/reference/queries) GitHub docs.
+
+### Contributers
+- [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing.
+- [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11)
 
 ## Usage
 ### Installation
@@ -86,6 +100,8 @@ os.environ["token"] # Insert your .env variable here
 ```
 #5: Then you're pretty much done! Your final code example should look something like this:
 
+#### 2: Finale
+
 ```py
 import git_api
 
@@ -100,3 +116,14 @@ print(user_info)
 
 ## Contributing
 Contributing will be listed mostly in the [Code of Conduct](https://github.com/JBYT27/GitAPI/blob/master/.github/CODE_OF_CONDUCT.md), however for more info, visit the [Contributing](https://github.com/JBYT27/GitAPI/blob/master/.github/CONTRIBUTE.md) readme.
+
+## License
+This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/master/MyApp/LICENSE).
+
+## Features:
+- [x] Add basic features for `User()` class 
+- [ ] Add advanced features for `User()` class
+- [x] Add basic functions for `GitHub()` class
+- [ ] Add advanced functions for `GitHub()` class
+- [ ] Add basic functions in package
+- [ ] Add documentary for package 
