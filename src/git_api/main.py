@@ -215,12 +215,22 @@ class User:
     self.pinneditems = self.runQ(query, self.token)
     return self.pinneditems
 
+
 class GitHub:
   def Status():
     url = "https://github.com"
     res = requests.get(url)
     status = res.status_code
     return status
+  
+  def Search(topic):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            
+          }
+      }
+    """
 
 
 # Remove this when uploading to PyPi
