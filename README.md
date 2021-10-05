@@ -1,5 +1,5 @@
 ⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️
-> **Version: 1.0.1
+> **Version: 1.0.2
 
 [![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
 [![Forks](https://img.shields.io/github/forks/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/network/members)
