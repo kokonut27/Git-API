@@ -14,7 +14,7 @@ setup(
   author = "JBYT27",
   author_email = "beol0127@gmail.com",
   license = "MIT",
-  packages=[''],
+  packages=['git_api'],
   classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
