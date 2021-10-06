@@ -17,6 +17,9 @@ USER = """
   userId:databaseId
   pinnedItems:anyPinnableItems 
 """
+REPO = """
+
+"""
 query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
 class ArgumentError(Exception):
@@ -217,6 +220,8 @@ class User:
 
 
 class GitHub:
+  def __init__(self, username):
+    self.user = username
   def Status():
     url = "https://github.com"
     res = requests.get(url)
@@ -225,16 +230,44 @@ class GitHub:
   
   def Search(topic):
     query = """
-      query UserData {
+      query SearchData {
           user(login: \"""" + self.user + """\") {
             
           }
       }
     """
+  
+class Repo:
+  def __init__(self, username):
+    try:
+      self.token = token
+     # if user has not yet ran the token function
+    except:
+      raise ArgumentError("Token has not been named by token function!")
+    
+    self.user = username
 
+    if self.user == None:
+      raise ArgumentError("Username argument must be filled out!")
+
+    self.runQ = asdf.run_query
+    
+
+  def Repo(self):
+    query = """
+      query RepoData {
+          PackageOwner(login: \"""" + self.user + """\") {
+            assignableUsers
+          }
+      }
+    """
+
+    self.repo = self.runQ(query, self.token)
+    return self.repo
 
 # Remove this when uploading to PyPi
-# Token(os.environ["token"])
+Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
+print(Repo("JBYT27").Repo())
