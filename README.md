@@ -27,7 +27,8 @@ Not all of the GitHub queries are in here, but if you wish to see all of them, g
 
 ### Contributers
 - [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing.
-- [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11)
+- [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11).
+- [jwodder](https://github.com/jwodder): Finding the solution to the [bug](https://github.com/JBYT27/GitAPI/issues/11).
 
 ## Usage
 ### Installation
