@@ -217,6 +217,19 @@ class User:
     """
     self.pinneditems = self.runQ(query, self.token)
     return self.pinneditems
+  
+  def PinnedItems2(self):
+    query = """
+      query UserData {
+          repository() {
+            collaborators {
+              first
+            }
+          }
+      }
+    """
+    self.pinneditems2 = self.runQ(query, self.token)
+    return self.pinneditems2
 
 
 class GitHub:
@@ -270,4 +283,5 @@ Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
-print(Repo("JBYT27").Repo())
+print(User("JBYT27").PinnedItems())
+print(User("JBYT27").PinnedItems2())
