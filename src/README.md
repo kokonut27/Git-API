@@ -1,5 +1,5 @@
 ⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️
-> **Version: 1.0.2
+> **Version: 1.5.0
 
 [![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
 [![Forks](https://img.shields.io/github/forks/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/network/members)
@@ -26,8 +26,9 @@ Languages used to program this package were: [Python3](https://python.org)
 Not all of the GitHub queries are in here, but if you wish to see all of them, go to [this](https://docs.github.com/en/graphql/reference/queries) GitHub docs.
 
 ### Contributers
-- [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing.
-- [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11)
+- [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing and helping with more GitHub Queries.
+- [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11).
+- [jwodder](https://github.com/jwodder): Finding the solution to the [bug](https://github.com/JBYT27/GitAPI/issues/11).
 
 ## Usage
 ### Installation
@@ -65,8 +66,8 @@ Once you're done with that, open the file, and add the following example code:
 ```py
 import git_api
 
-Token() # We'll place the personal access token here later on. For now, it'll be empty.
-user_info = User("Username here").User() # Insert your username in the argument shown here.
+git_api.Token() # We'll place the personal access token here later on. For now, it'll be empty.
+user_info = git_api.User("Username here").User() # Insert your username in the argument shown here.
 
 print(user_info)
 ```
@@ -105,8 +106,8 @@ os.environ["token"] # Insert your .env variable here
 ```py
 import git_api
 
-Token(os.environ["token"])
-user_info = User("JBYT27").User()
+git_api.Token(os.environ["token"])
+user_info = git_api.User("JBYT27").User()
 
 print(user_info)
 ```
