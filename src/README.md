@@ -114,6 +114,8 @@ print(user_info)
 
 > This will print some of the user's information.
 
+An example repl is listed [here](https://replit.com/@JBloves27/GitAPI-Example).
+
 
 ## Contributing
 Contributing will be listed mostly in the [Code of Conduct](https://github.com/JBYT27/GitAPI/blob/master/.github/CODE_OF_CONDUCT.md), however for more info, visit the [Contributing](https://github.com/JBYT27/GitAPI/blob/master/.github/CONTRIBUTE.md) readme.
