@@ -26,7 +26,7 @@ Languages used to program this package were: [Python3](https://python.org)
 Not all of the GitHub queries are in here, but if you wish to see all of them, go to [this](https://docs.github.com/en/graphql/reference/queries) GitHub docs.
 
 ### Contributers
-- [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing.
+- [darkdarcool](https://github.com/darkdarcool): More professionalized file-ing and helping with more GitHub Queries.
 - [Isaiah08-D](https://github.com/Isaiah08-D): Adding comments, and letting us know of [bug](https://github.com/JBYT27/GitAPI/issues/11).
 - [jwodder](https://github.com/jwodder): Finding the solution to the [bug](https://github.com/JBYT27/GitAPI/issues/11).
 
