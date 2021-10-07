@@ -243,14 +243,14 @@ class GitHub:
     status = res.status_code
     return status
   
-  def Search(topic):
+  '''def Search(topic):
     query = """
       query SearchData {
           user(login: \"""" + self.user + """\") {
             
           }
       }
-    """
+    """'''
   
 class Repo:
   def __init__(self, owner, reponame):
