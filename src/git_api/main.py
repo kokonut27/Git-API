@@ -419,7 +419,7 @@ class Repo:
     """
 
     self.repoName = self.runQ(query, self.token)
-    return self.Reponame
+    return self.repoName
   
   def Language(self):
     query = """
