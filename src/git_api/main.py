@@ -18,7 +18,21 @@ USER = """
   pinnedItems:anyPinnableItems 
 """
 REPO = """
-
+  name 
+  id 
+  description 
+  homepageUrl
+  isEmpty 
+  isArchived 
+  isDisabled 
+  isLocked
+  stargazerCount
+  isPrivate 
+  databaseId 
+  createdAt
+  primaryLanguage {
+    name
+  }
 """
 query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
@@ -218,18 +232,6 @@ class User:
     self.pinneditems = self.runQ(query, self.token)
     return self.pinneditems
   
-  def PinnedItems2(self):
-    query = """
-      query UserData {
-          repository() {
-            collaborators {
-              first
-            }
-          }
-      }
-    """
-    self.pinneditems2 = self.runQ(query, self.token)
-    return self.pinneditems2
 
 
 class GitHub:
@@ -251,17 +253,21 @@ class GitHub:
     """
   
 class Repo:
-  def __init__(self, username):
+  def __init__(self, owner, reponame):
     try:
       self.token = token
      # if user has not yet ran the token function
     except:
       raise ArgumentError("Token has not been named by token function!")
     
-    self.user = username
+    self.reponame = reponame
+    self.owner = owner
 
-    if self.user == None:
-      raise ArgumentError("Username argument must be filled out!")
+    if self.reponame == None:
+      raise ArgumentError("Reponame argument must be filled out!")
+    
+    if self.owner == None:
+      raise ArgumentError("Owner argument must be filled out!")
 
     self.runQ = asdf.run_query
     
@@ -269,19 +275,181 @@ class Repo:
   def Repo(self):
     query = """
       query RepoData {
-          PackageOwner(login: \"""" + self.user + """\") {
-            assignableUsers
-          }
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          """+REPO+"""
+        }
       }
     """
 
     self.repo = self.runQ(query, self.token)
     return self.repo
 
+  def CreatedAt(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          createdAt
+        }
+      }
+    """
+
+    self.createdAt = self.runQ(query, self.token)
+    return self.createdAt
+
+  def Databaseid(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          databaseId
+        }
+      }
+    """
+
+    self.dbid = self.runQ(query, self.token)
+    return self.dbid
+  
+  def Description(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          description
+        }
+      }
+    """
+
+    self.repodescription = self.runQ(query, self.token)
+    return self.repodescription
+  
+  def Homepageurl(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          homepageUrl
+        }
+      }
+    """
+    self.homepageurl = self.runQ(query, self.token)
+    data2 = ""
+    data2 += str(self.homepageurl)
+    data = json.loads(data2)
+    if data["data"]["repository"]["homepageUrl"] == "" or data["data"]["repository"]["homepageUrl"] == None:
+      return("No url exists or is private!")
+    else:
+      return self.homepageurl
+  
+  def Id(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          id
+        }
+      }
+    """
+
+    self.repoid = self.runQ(query, self.token)
+    return self.repoid
+  
+  def IsArchived(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          isArchived
+        }
+      }
+    """
+
+    self.repoIsArchived = self.runQ(query, self.token)
+    return self.repoIsArchived
+  
+  def IsDisabled(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          isDisabled
+        }
+      }
+    """
+
+    self.repoIsDisabled = self.runQ(query, self.token)
+    return self.repoIsDisabled
+  
+  def IsEmpty(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          isEmpty
+        }
+      }
+    """
+
+    self.repoIsEmpty = self.runQ(query, self.token)
+    return self.repoIsEmpty
+  
+  def IsLocked(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          isLocked
+        }
+      }
+    """
+
+    self.repoIsLocked = self.runQ(query, self.token)
+    return self.repoIsLocked
+  
+  def IsPrivate(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          isPrivate
+        }
+      }
+    """
+
+    self.repoIsPrivate = self.runQ(query, self.token)
+    return self.repoIsPrivate
+  
+  def Name(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          name
+        }
+      }
+    """
+
+    self.repoName = self.runQ(query, self.token)
+    return self.Reponame
+  
+  def Language(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          primaryLanguage {
+            name
+          }
+        }
+      }
+    """
+
+    self.repoLanguage = self.runQ(query, self.token)
+    return self.repoLanguage
+  
+  def Stars(self):
+    query = """
+      query RepoData {
+        repository(name: \""""+self.reponame+"""\" owner: \""""+self.owner+"""\") {
+          stargazerCount
+        }
+      }
+    """
+
+    self.repoStars = self.runQ(query, self.token)
+    return self.repoStars
+
 # Remove this when uploading to PyPi
-Token(os.environ["token"])
+# Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
-print(User("JBYT27").PinnedItems())
-print(User("JBYT27").PinnedItems2())
+# print(Repo("JBYT27", "GitAPI").Repo())
