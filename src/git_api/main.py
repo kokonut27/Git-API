@@ -1,39 +1,10 @@
 import requests
 import os
 import json
+from queries import *
 
 
 url = 'https://api.github.com/graphql'
-USER = """
-  bio
-  email
-  avatarLink:avatarUrl
-  accountCreatedAt:createdAt
-  isAdmin:isSiteAdmin
-  location
-  name
-  twitterUsername
-  isDevMember:isDeveloperProgramMember
-  userId:databaseId
-  pinnedItems:anyPinnableItems 
-"""
-REPO = """
-  name 
-  id 
-  description 
-  homepageUrl
-  isEmpty 
-  isArchived 
-  isDisabled 
-  isLocked
-  stargazerCount
-  isPrivate 
-  databaseId 
-  createdAt
-  primaryLanguage {
-    name
-  }
-"""
 
 query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
@@ -449,8 +420,8 @@ class Repo:
     return self.repoStars
 
 # Remove this when uploading to PyPi
-# Token(os.environ["token"])
+Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
-# print(Repo("JBYT27", "GitAPI").Repo())
+print(Repo("JBYT27", "GitAPI").Repo())
