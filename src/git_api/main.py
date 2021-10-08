@@ -203,6 +203,17 @@ class User:
     """
     self.pinneditems = self.runQ(query, self.token)
     return self.pinneditems
+
+  def Company(self):
+    query = """
+      query UserData {
+          user(login: \"""" + self.user + """\") {
+            company
+          }
+      }
+    """
+    self.company = self.runQ(query, self.token)
+    return self.company
   
 
 
@@ -421,7 +432,7 @@ class Repo:
 
 # Remove this when uploading to PyPi
 Token(os.environ["token"])
-# print(User("JBYT27").User())
+print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
-print(Repo("JBYT27", "GitAPI").Repo())
+# print(Repo("JBYT27", "GitAPI").Repo())
