@@ -1,2 +1,2 @@
 language = "python3"
-run = "python src/git_api/main.py" # Remove this when uploading to PyPi
+run = "python src/git_api/main.py"
