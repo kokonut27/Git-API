@@ -34,6 +34,7 @@ REPO = """
     name
   }
 """
+
 query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
 class ArgumentError(Exception):
@@ -305,8 +306,8 @@ class Repo:
       }
     """
 
-    self.dbid = self.runQ(query, self.token)
-    return self.dbid
+    self.dbId = self.runQ(query, self.token)
+    return self.dbId
   
   def Description(self):
     query = """
@@ -317,8 +318,8 @@ class Repo:
       }
     """
 
-    self.repodescription = self.runQ(query, self.token)
-    return self.repodescription
+    self.repoDescription = self.runQ(query, self.token)
+    return self.repoDescription
   
   def Homepageurl(self):
     query = """
@@ -328,14 +329,14 @@ class Repo:
         }
       }
     """
-    self.homepageurl = self.runQ(query, self.token)
+    self.homepageUrl = self.runQ(query, self.token)
     data2 = ""
-    data2 += str(self.homepageurl)
+    data2 += str(self.homepageUrl)
     data = json.loads(data2)
     if data["data"]["repository"]["homepageUrl"] == "" or data["data"]["repository"]["homepageUrl"] == None:
       return("No url exists or is private!")
     else:
-      return self.homepageurl
+      return self.homepageUrl
   
   def Id(self):
     query = """
@@ -346,8 +347,8 @@ class Repo:
       }
     """
 
-    self.repoid = self.runQ(query, self.token)
-    return self.repoid
+    self.repoId = self.runQ(query, self.token)
+    return self.repoId
   
   def IsArchived(self):
     query = """
