@@ -10,6 +10,14 @@ USER = """
   isDevMember:isDeveloperProgramMember
   userId:databaseId
   pinnedItems:anyPinnableItems 
+  company
+    status {
+      gitEmoji:emoji
+      lastUpdated:updatedAt
+      message
+      id
+      expires:expiresAt
+    }
 """
 REPO = """
   name 
@@ -26,5 +34,17 @@ REPO = """
   createdAt
   primaryLanguage {
     name
+  }
+"""
+FOLLOW = """
+  followers(first: $followerCount) {
+    users: nodes {
+      name: login
+    }
+  }
+  following(first: $followingCount) {
+    users: nodes {
+      name:login
+    }
   }
 """
