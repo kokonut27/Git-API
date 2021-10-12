@@ -431,8 +431,8 @@ class Repo:
     return self.repoStars
 
 # Remove this when uploading to PyPi
-Token(os.environ["token"])
-print(User("JBYT27").User())
+# Token(os.environ["token"])
+# print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
 # print(Repo("JBYT27", "GitAPI").Repo())
