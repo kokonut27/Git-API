@@ -215,6 +215,34 @@ class User:
     self.company = self.runQ(query, self.token)
     return self.company
   
+class UserFollower:
+  def __init__(self, username):
+    try:
+      self.token = token
+     # if user has not yet ran the token function
+    except:
+      raise ArgumentError("Token has not been named by token function!")
+    self.user = username
+    # create the query
+    query = """
+      query UserFollowerData { 
+          user(login: \"""" + self.user + """\") { 
+            """+FOLLOW+"""
+          } 
+      }
+    """
+    self.query = query
+    
+    # if the username is none
+    if self.user == None:
+      raise ArgumentError("Username argument must be filled out!")
+    
+    self.runQ = asdf.run_query
+  
+  def Followers(self):
+    self.userfollow = self.runQ(self.query, self.token)
+    return self.userfollow
+  
 
 
 class GitHub:
