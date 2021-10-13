@@ -214,7 +214,9 @@ class User:
     """
     self.company = self.runQ(query, self.token)
     return self.company
-  
+
+
+ 
 class UserFollower:
   def __init__(self, username, followercount):
     try:
@@ -254,6 +256,7 @@ class UserFollower:
   
 
 
+
 class UserFollowing:
   def __init__(self, username, followingcount):
     try:
@@ -290,6 +293,8 @@ class UserFollowing:
   def Following(self):
     self.userfollowing2 = self.runQ(self.query, self.token)
     return self.userfollowing2
+
+
 
 
 class GitHub:
@@ -508,9 +513,9 @@ class Repo:
     return self.repoStars
 
 # Remove this when uploading to PyPi
-Token(os.environ["token"])
+# Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
 # print(Repo("JBYT27", "GitAPI").Repo())
-print(UserFollowing("JBYT27", "10").Following())
+# print(UserFollowing("JBYT27", "10").Following())
