@@ -216,7 +216,7 @@ class User:
     return self.company
   
 class UserFollower:
-  def __init__(self, username, followercount, followingcount):
+  def __init__(self, username, followercount):
     try:
       self.token = token
      # if user has not yet ran the token function
@@ -224,7 +224,7 @@ class UserFollower:
       raise ArgumentError("Token has not been named by token function!")
     self.user = username
     self.userfollower = followercount
-    self.userfollowing = followingcount
+    # self.userfollowing = followingcount
     # create the query
 
     query = """
@@ -235,12 +235,46 @@ class UserFollower:
               name: login
             }
           }
+        }
+      }
+    """
+    self.query = query
+    
+    # if the username is none
+    if self.user == None:
+      raise ArgumentError("Username argument must be filled out!")
+    if self.userfollower == None:
+        raise ArgumentError("Userfollower argument must be filled out!")
+    
+    self.runQ = asdf.run_query
+  
+  def Followers(self):
+    self.userfollower2 = self.runQ(self.query, self.token)
+    return self.userfollower2
+  
+
+
+class UserFollowing:
+  def __init__(self, username, followingcount):
+    try:
+      self.token = token
+     # if user has not yet ran the token function
+    except:
+      raise ArgumentError("Token has not been named by token function!")
+    self.user = username
+    # self.userfollower = followercount
+    self.userfollowing = followingcount
+    # create the query
+
+    query = """
+      query UserFolloweringData { 
+        user(login: \"""" + self.user + """\") { 
               following(first: """+followingcount+""") {
             users: nodes {
               name:login
             }
           }
-        } 
+        }
       }
     """
     self.query = query
@@ -249,16 +283,13 @@ class UserFollower:
     if self.user == None:
       raise ArgumentError("Username argument must be filled out!")
     if self.userfollowing == None:
-      raise ArgumentError("Userfollowing argument must be filled out!")
-    if self.userfollower == None:
-      raise ArgumentError("Userfollower argument must be filled out!")
+        raise ArgumentError("Userfollowing argument must be filled out!")
     
     self.runQ = asdf.run_query
   
-  def Followers(self):
-    self.userfollow = self.runQ(self.query, self.token)
-    return self.userfollow
-  
+  def Following(self):
+    self.userfollowing2 = self.runQ(self.query, self.token)
+    return self.userfollowing2
 
 
 class GitHub:
@@ -477,9 +508,9 @@ class Repo:
     return self.repoStars
 
 # Remove this when uploading to PyPi
-# Token(os.environ["token"])
+Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
 # print(Repo("JBYT27", "GitAPI").Repo())
-# print(UserFollower("JBYT27", "10", "10").Followers())
+print(UserFollowing("JBYT27", "10").Following())
