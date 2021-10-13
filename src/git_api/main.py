@@ -216,19 +216,31 @@ class User:
     return self.company
   
 class UserFollower:
-  def __init__(self, username):
+  def __init__(self, username, followercount, followingcount):
     try:
       self.token = token
      # if user has not yet ran the token function
     except:
       raise ArgumentError("Token has not been named by token function!")
     self.user = username
+    self.userfollower = followercount
+    self.userfollowing = followingcount
     # create the query
+
     query = """
       query UserFollowerData { 
-          user(login: \"""" + self.user + """\") { 
-            """+FOLLOW+"""
-          } 
+        user(login: \"""" + self.user + """\") { 
+              followers(first: """+followercount+""") {
+            users: nodes {
+              name: login
+            }
+          }
+              following(first: """+followingcount+""") {
+            users: nodes {
+              name:login
+            }
+          }
+        } 
       }
     """
     self.query = query
@@ -236,6 +248,10 @@ class UserFollower:
     # if the username is none
     if self.user == None:
       raise ArgumentError("Username argument must be filled out!")
+    if self.userfollowing == None:
+      raise ArgumentError("Userfollowing argument must be filled out!")
+    if self.userfollower == None:
+      raise ArgumentError("Userfollower argument must be filled out!")
     
     self.runQ = asdf.run_query
   
@@ -461,8 +477,9 @@ class Repo:
     return self.repoStars
 
 # Remove this when uploading to PyPi
-# Token(os.environ["token"])
+Token(os.environ["token"])
 # print(User("JBYT27").User())
 # print(User("JBYT27").Email())
 # print(GitHub.Status())
 # print(Repo("JBYT27", "GitAPI").Repo())
+print(UserFollower("JBYT27", "10", "10").Followers())

@@ -36,15 +36,3 @@ REPO = """
     name
   }
 """
-FOLLOW = """
-  followers(first: $followerCount) {
-    users: nodes {
-      name: login
-    }
-  }
-  following(first: $followingCount) {
-    users: nodes {
-      name:login
-    }
-  }
-"""
