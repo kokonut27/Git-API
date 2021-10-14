@@ -1,11 +1,47 @@
 import requests
 import os
 import json
-from queries import *
 
 
 url = 'https://api.github.com/graphql'
-
+USER = """
+  bio
+  email
+  avatarLink:avatarUrl
+  accountCreatedAt:createdAt
+  isAdmin:isSiteAdmin
+  location
+  name
+  twitterUsername
+  isDevMember:isDeveloperProgramMember
+  userId:databaseId
+  pinnedItems:anyPinnableItems 
+  company
+    status {
+      gitEmoji:emoji
+      lastUpdated:updatedAt
+      message
+      id
+      expires:expiresAt
+    }
+"""
+REPO = """
+  name 
+  id 
+  description 
+  homepageUrl
+  isEmpty 
+  isArchived 
+  isDisabled 
+  isLocked
+  stargazerCount
+  isPrivate 
+  databaseId 
+  createdAt
+  primaryLanguage {
+    name
+  }
+"""
 query_website = "https://docs.github.com/en/graphql/reference/queries" # For reference.
 
 class ArgumentError(Exception):

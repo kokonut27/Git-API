@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
   name = "git_api",
-  version = "1.7.0",
+  version = "1.7.1",
   description = "A GitHub API. Extracts data from GitHub into json style data.",
   long_description = long_description,
   long_description_content_type = "text/markdown",
