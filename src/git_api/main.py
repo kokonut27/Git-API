@@ -137,17 +137,6 @@ class User:
     """
     self.admin = self.runQ(query, self.token)
     return self.admin
-
-  def Location(self):
-    query = """
-      query UserData {
-          user(login: \"""" + self.user + """\") {
-            location
-          }
-      }
-    """
-    self.location = self.runQ(query, self.token)
-    return self.location
   
   def Location(self):
     query = """

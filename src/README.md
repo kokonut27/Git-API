@@ -180,3 +180,10 @@ This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/
 - [ ] Add advanced functions for `GitHub()` class
 - [ ] Add basic functions in package
 - [ ] Add documentary for package 
+
+
+## All functions:
+
+#### `git_api.User("username")`
+* `git_api.User("username").User()`
+* `git_api.User("username").

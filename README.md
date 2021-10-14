@@ -186,4 +186,43 @@ This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/
 
 #### `git_api.User("username")`
 * `git_api.User("username").User()`
-* `git_api.User("username").
+* `git_api.User("username").Name()`
+* `git_api.User("username").Bio()`
+* `git_api.User("username").Name()`
+* `git_api.User("username").Email()`
+* `git_api.User("username").Avatar()`
+* `git_api.User("username").Account()`
+* `git_api.User("username").Admin()`
+* `git_api.User("username").Location()`
+* `git_api.User("username").Twitter()`
+* `git_api.User("username").Developer()`
+* `git_api.User("username").Userid()`
+* `git_api.User("username").PinnedItems()`
+* `git_api.User("username").Company()`
+
+#### `git_api.UserFollower("username", "num_of_followers_shown")`
+* `git_api.UserFollower("username", "num_of_followers_shown").Followers()`
+
+#### `git_api.UserFollowing("username", "num_of_following_shown")`
+* `git_api.UserFollowing("username", "num_of_following_shown").Following()`
+
+#### `git_api.GitHub()`
+>** Note that this class is a WIP**
+
+* `git_api.GitHub.Status()`
+
+#### `git_api.Repo("owner", "reponame")`
+* `git_api.Repo("owner", "reponame").Repo()`
+* `git_api.Repo("owner", "reponame").CreatedAt()`
+* `git_api.Repo("owner", "reponame").Databaseid()`
+* `git_api.Repo("owner", "reponame").Description()`
+* `git_api.Repo("owner", "reponame").Homepageurl()`
+* `git_api.Repo("owner", "reponame").Id()`
+* `git_api.Repo("owner", "reponame").IsArchived()`
+* `git_api.Repo("owner", "reponame").IsDisabled()`
+* `git_api.Repo("owner", "reponame").IsEmpty()`
+* `git_api.Repo("owner", "reponame").IsLocked()`
+* `git_api.Repo("owner", "reponame").IsPrivate()`
+* `git_api.Repo("owner", "reponame").Name()`
+* `git_api.Repo("owner", "reponame").Language()`
+* `git_api.Repo("owner", "reponame").Stars()`
