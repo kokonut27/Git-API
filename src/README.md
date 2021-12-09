@@ -1,5 +1,5 @@
 ⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️
-> **Version: 1.7.1
+> **Version: 1.7.5
 
 [![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
 [![Forks](https://img.shields.io/github/forks/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/network/members)
@@ -18,6 +18,9 @@ GitAPI is an API made with python - styled with json - to make the data preferab
 This API is designed to show GitHub stats for certain users, or viewing GitHub itself, in data form.
 
 > To learn how to use it, you can read the Usage header below.
+
+### Posts
+The Replit post is located [here](https://replit.com/talk/share/GitAPI-A-GitHub-API-for-you/146858)
 
 ### Languages used
 Languages used to program this package were: [Python3](https://python.org)
@@ -172,6 +175,9 @@ Contributing will be listed mostly in the [Code of Conduct](https://github.com/J
 
 ## License
 This package is under the [`MIT License`](https://github.com/JBYT27/GitAPI/blob/master/MyApp/LICENSE).
+
+## Projects
+All of the projects involving or using this package is listed [here](https://github.com/JBYT27/GitAPI/blob/master/.github/PROJECTS.md).
 
 ## Features:
 - [x] Add basic features for `User()` class 
