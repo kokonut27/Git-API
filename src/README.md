@@ -1,4 +1,4 @@
-⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️
+<!-- ⚠️ CAUTION: **`Note that this is a WIP, and is not yet perfected. There will be errors, and it would be appreciated if you let us know about it.`** ⚠️ -->
 > **Version: 1.7.5
 
 [![Contributors](https://img.shields.io/github/contributors/JBYT27/GitAPI?style=for-the-badge)](https://github.com/JBYT27/GitAPI/graphs/contributors)
