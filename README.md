@@ -213,7 +213,7 @@ All of the projects involving or using this package is listed [here](https://git
 * `git_api.UserFollowing("username", "num_of_following_shown").Following()`
 
 #### `git_api.GitHub()`
->** Note that this class is a WIP**
+>** An incomplete class. DO NOT USE!**
 
 * `git_api.GitHub.Status()`
 
