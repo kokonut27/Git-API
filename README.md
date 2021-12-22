@@ -19,9 +19,6 @@ This API is designed to show GitHub stats for certain users, or viewing GitHub i
 
 > To learn how to use it, you can read the Usage header below.
 
-### Posts
-The Replit post is located [here](https://replit.com/talk/share/GitAPI-A-GitHub-API-for-you/146858)
-
 ### Languages used
 Languages used to program this package were: [Python3](https://python.org)
 
