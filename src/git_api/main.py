@@ -66,7 +66,7 @@ class asdf:
 # set the token
 def Token(TOKEN=None):
   global token
-  if TOKEN == None:
+  if TOKEN is None:
     raise ArgumentError("TOKEN argument must be filled out!")
   else:
     token = TOKEN
@@ -88,11 +88,11 @@ class User:
       }
     """
     self.query = query
-    
+
     # if the username is none
-    if self.user == None:
+    if self.user is None:
       raise ArgumentError("Username argument must be filled out!")
-    
+
     self.runQ = asdf.run_query
 
   # actually run the request
@@ -133,10 +133,10 @@ class User:
       }
     """
     self.email = self.runQ(query, self.token)
-    data2 = ""
-    data2 += str(self.email)
+    data2 = "" + str(self.email)
     data = json.loads(data2)
-    if data["data"]["user"]["email"] == "" or data["data"]["user"]["email"] == None:
+    if (data["data"]["user"]["email"] == ""
+        or data["data"]["user"]["email"] is None):
       return("No email exists or is private!")
     else:
       return self.email
@@ -266,13 +266,13 @@ class UserFollower:
       }
     """
     self.query = query
-    
+
     # if the username is none
-    if self.user == None:
+    if self.user is None:
       raise ArgumentError("Username argument must be filled out!")
-    if self.userfollower == None:
-        raise ArgumentError("Userfollower argument must be filled out!")
-    
+    if self.userfollower is None:
+      raise ArgumentError("Userfollower argument must be filled out!")
+
     self.runQ = asdf.run_query
   
   def Followers(self):
@@ -306,13 +306,13 @@ class UserFollowing:
       }
     """
     self.query = query
-    
+
     # if the username is none
-    if self.user == None:
+    if self.user is None:
       raise ArgumentError("Username argument must be filled out!")
-    if self.userfollowing == None:
-        raise ArgumentError("Userfollowing argument must be filled out!")
-    
+    if self.userfollowing is None:
+      raise ArgumentError("Userfollowing argument must be filled out!")
+
     self.runQ = asdf.run_query
   
   def Following(self):
@@ -328,8 +328,7 @@ class GitHub:
   def Status():
     url = "https://github.com"
     res = requests.get(url)
-    status = res.status_code
-    return status
+    return res.status_code
   
   '''def Search(topic):
     query = """
@@ -349,14 +348,14 @@ class Repo:
      # if user has not yet ran the token function
     except:
       raise ArgumentError("Token has not been named by token function!")
-    
+
     self.reponame = reponame
     self.owner = owner
 
-    if self.reponame == None:
+    if self.reponame is None:
       raise ArgumentError("Reponame argument must be filled out!")
-    
-    if self.owner == None:
+
+    if self.owner is None:
       raise ArgumentError("Owner argument must be filled out!")
 
     self.runQ = asdf.run_query
@@ -419,10 +418,10 @@ class Repo:
       }
     """
     self.homepageUrl = self.runQ(query, self.token)
-    data2 = ""
-    data2 += str(self.homepageUrl)
+    data2 = "" + str(self.homepageUrl)
     data = json.loads(data2)
-    if data["data"]["repository"]["homepageUrl"] == "" or data["data"]["repository"]["homepageUrl"] == None:
+    if (data["data"]["repository"]["homepageUrl"] == ""
+        or data["data"]["repository"]["homepageUrl"] is None):
       return("No url exists or is private!")
     else:
       return self.homepageUrl
