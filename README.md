@@ -178,10 +178,10 @@ All of the projects involving or using this package is listed [here](https://git
 
 ## Features:
 - [x] Add basic features for `User()` class 
-- [ ] Add advanced features for `User()` class
+- [x] Add advanced features for `User()` class
 - [x] Add basic functions for `GitHub()` class
 - [ ] Add advanced functions for `GitHub()` class
-- [ ] Add basic functions in package
+- [x] Add basic functions in package
 - [ ] Add documentary for package 
 
 
