@@ -53,15 +53,15 @@ class QueryFailError(Exception):
 class asdf:
   # run a request from the github api
   def run_query(query, token):
-        try:
-          headers = {"Authorization": "Bearer " + token}
-        except:
-          raise ArgumentError("Token has not been named by token function!")
-        request = requests.post(url, json={'query': query}, headers=headers)
-        if request.status_code == 200:
-          return json.dumps(request.json(), indent=2, sort_keys=True)
-        else: # the request failed
-          raise QueryFailError("Query failed to run by returning code of {}. {}".format(request.status_code, query))
+    try:
+      headers = {"Authorization": f'Bearer {token}'}
+    except:
+      raise ArgumentError("Token has not been named by token function!")
+    request = requests.post(url, json={'query': query}, headers=headers)
+    if request.status_code == 200:
+      return json.dumps(request.json(), indent=2, sort_keys=True)
+    else: # the request failed
+      raise QueryFailError("Query failed to run by returning code of {}. {}".format(request.status_code, query))
 
 # set the token
 def Token(TOKEN=None):
