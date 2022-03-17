@@ -9,7 +9,7 @@
 [![Downloads on PyPI](https://img.shields.io/pypi/dw/git_api?style=for-the-badge)](https://pypi.org/project/git-api/)
 
 # GitAPI: An API made for GitHub Stats!
-> Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org/projects/git_api), and coded by [JBYT27](https://github.com/JBYT27)
+> Coded in [Python3](https://python.org), uploaded to [PyPi](https://pypi.org/project/git-api), and coded by [JBYT27](https://github.com/JBYT27)
 
 ## About
 ### About
